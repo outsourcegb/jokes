@@ -1,0 +1,18 @@
+.d-flex.justify-content-between
+  h4 Latest Properties for sale
+  a[href="#"] View More     
+.row
+  - (1..4).each do |n|
+    .col-md-3      
+      .card.border-light.shadow-sm
+        img.card-img-top[src="https://cloud-hd.chiefarchitect.com/1/images/general/french-provincial.jpg" alt="1"]
+        .card-body.p-2
+          h5.d-flex.justify-content-between
+            span
+              | 5 BHK
+            span
+              | 50,00,000₹
+          p.card-text.text-right
+            span.small Naranpura, Ahmedabad
+            span.small.ml-2 &middot;
+            span.small.ml-2 Jan 1

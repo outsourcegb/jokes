@@ -1,1 +1,13 @@
+$font-family-sans-serif:      Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+$font-size-base:              0.8rem !default;
+
+
 @import "bootstrap";
+
+.shared-links a {
+  margin-right: 1em;
+  display: inline-block;
+}

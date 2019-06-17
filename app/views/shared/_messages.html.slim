@@ -1,0 +1,14 @@
+- if notice or alert
+  - if notice
+    .alert.alert-success.alert-dismissible.fade.show[role="alert"]
+      = notice
+      button.close[type="button" data-dismiss="alert" aria-label="Close"]
+        span[aria-hidden="true"]
+          | ×
+
+  - if alert
+    .alert.alert-danger.alert-dismissible.fade.show[role="alert"]
+      = alert
+      button.close[type="button" data-dismiss="alert" aria-label="Close"]
+        span[aria-hidden="true"]
+          | ×
