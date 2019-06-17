@@ -9,7 +9,7 @@ class JokesController < ApplicationController
   end
 
   # GET /jokes/1
-  # GET /jokes/1.json
+  # GET /jokes/1.json`
   def show
   end
 
@@ -81,6 +81,6 @@ class JokesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def joke_params
-      params.require(:joke).permit(:content, :active, :pub_date)
+      params.require(:joke).permit(:content, :tag_list)
     end
 end
