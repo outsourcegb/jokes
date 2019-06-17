@@ -1,1 +1,20 @@
-= render 'hero'
+h5.mb-3 Latest Jokes
+.row
+  .col-md-12
+    / = debug(@jokes)
+    - @jokes.each do|joke|
+      blockquote.blockquote
+        p.mb-0
+          = simple_format(joke.content)
+        footer.blockquote-footer
+          = link_to joke.user.email, "#"
+          br
+          - if current_user.liked? joke
+            = link_to "Unlike", unlike_joke_path(joke), method: :delete
+          - else
+            = link_to "Like", like_joke_path(joke), method: :put
+            
+          br
+          cite[title="Source Title"]
+            | #{time_ago_in_words(joke.created_at)} ago
+  = paginate @jokes

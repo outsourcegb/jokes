@@ -51,6 +51,7 @@ group :development do
 
   gem 'guard'
   gem 'guard-livereload', '~> 2.5', require: false
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :test do
@@ -70,3 +71,5 @@ gem 'slim'
 gem 'simple_form'
 gem 'devise'
 gem "mini_magick"
+gem 'acts_as_votable', '~> 0.12.0'
+gem 'kaminari'

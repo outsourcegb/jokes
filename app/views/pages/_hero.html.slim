@@ -1,18 +1,11 @@
-.d-flex.flex-row.text-center.justify-content-center
-  .pb-5.mb-3
-   h1.text-success Gb Properties is 100% brokerage free.
-   h4.text-primary Most preffered place to buy and sale your in Ahmedabad and nearby areas. 
-
-.container
-  .row
-    .col-md-12
-      .row
-        .col-md-12
-          = render "popular"
-      .row.mt-5
-        .col-md-12
-          = render "popular"
-      
-      / .row.mt-5
-        .col-md-12
-          = render "projects"
+h5.mb-3 Latest Jokes
+.row
+  .col-md-12
+    - (1..20).each do|n|
+      blockquote.blockquote
+        p.mb-0
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+        footer.blockquote-footer
+          | Someone famous in 
+          cite[title="Source Title"]
+            | Source Title
