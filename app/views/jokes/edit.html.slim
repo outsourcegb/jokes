@@ -1,0 +1,6 @@
+.row
+  .col-md-8.offset-md-2
+    .d-flex.justify-content-between
+      h4.mb-2 Edit Joke
+      = link_to 'Show Joke', @joke
+    = render 'form', joke: @joke    

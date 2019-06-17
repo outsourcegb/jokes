@@ -1,20 +1,22 @@
-h5.mb-3 Latest Jokes
+h4.mb-3 Latest Jokes
 .row
   .col-md-12
     / = debug(@jokes)
     - @jokes.each do|joke|
-      blockquote.blockquote
-        p.mb-0
+      blockquote.blockquote.shadow-sm.p-3
+        .mb-5
           = simple_format(joke.content)
         footer.blockquote-footer
-          = link_to joke.user.email, "#"
-          br
-          - if current_user.liked? joke
-            = link_to "Unlike", unlike_joke_path(joke), method: :delete
+          | Posted by #{link_to joke.user.email, "#"}
+          - if user_signed_in?
+            - if current_user.liked? joke
+              = link_to "Unlike", unlike_joke_path(joke), method: :delete, class: 'pl-5'
+            - else
+              = link_to "Like", like_joke_path(joke), method: :put, class: 'pl-5'
           - else
-            = link_to "Like", like_joke_path(joke), method: :put
-            
-          br
-          cite[title="Source Title"]
-            | #{time_ago_in_words(joke.created_at)} ago
-  = paginate @jokes
+              = link_to "Like", like_joke_path(joke), method: :put, class: 'pl-5'
+          span.pl-5
+            | Posted #{time_ago_in_words(joke.created_at)} ago
+.row
+  .col-md-12
+    = paginate @jokes

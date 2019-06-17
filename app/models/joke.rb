@@ -1,9 +1,11 @@
 class Joke < ApplicationRecord
   belongs_to :user
 
+  validates_presence_of :content 
+
   acts_as_votable
 
-  paginates_per 2
+  paginates_per 10
 
   before_create :default_values
 
