@@ -3,7 +3,6 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
   .form-inputs
     = f.input :content, label: "Joke", :input_html => { 'rows' => 8}
-    = f.input :tag_list
   .form-actions.d
     = f.button :submit, class: "btn btn-primary"
     = link_to 'Cancel', jokes_path, class: 'ml-3'

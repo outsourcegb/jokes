@@ -1,7 +1,7 @@
 class JokesController < ApplicationController
   before_action :set_joke, only: [:show, :edit, :update, :destroy, :like, :unlike]
   before_action :authenticate_user!, only: [:new, :edit, :update, :create, :like, :unlike]
-
+  
   # GET /jokes
   # GET /jokes.json
   def index
