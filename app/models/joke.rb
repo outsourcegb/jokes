@@ -4,7 +4,6 @@ class Joke < ApplicationRecord
   validates_presence_of :content 
 
   acts_as_votable
-  acts_as_taggable
 
   paginates_per 10
 
