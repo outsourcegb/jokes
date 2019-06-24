@@ -5,8 +5,7 @@ Rails.application.routes.draw do
       put 'like', to: "jokes#like"
   		delete 'unlike', to: "jokes#unlike"
     end
-    
-    
+    get :autocomplete_tag_name, :on => :collection
   end
   devise_for :users
   get 'pages/index'

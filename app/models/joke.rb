@@ -7,6 +7,8 @@ class Joke < ApplicationRecord
 
   paginates_per 10
 
+  acts_as_taggable_on :tags
+
   before_create :default_values
 
   scope :published, -> { where(active: true) }
