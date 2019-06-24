@@ -74,3 +74,6 @@ gem "mini_magick"
 gem 'acts_as_votable', '~> 0.12.0'
 gem 'kaminari'
 gem 'rails_admin', '~> 2.0.0.beta'
+gem 'acts-as-taggable-on', '~> 6.0'
+gem 'jquery-ui-rails'
+gem 'rails-jquery-autocomplete'

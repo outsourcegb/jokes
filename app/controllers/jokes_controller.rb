@@ -1,6 +1,7 @@
 class JokesController < ApplicationController
   before_action :set_joke, only: [:show, :edit, :update, :destroy, :like, :unlike]
   before_action :authenticate_user!, only: [:new, :edit, :update, :create, :like, :unlike]
+  autocomplete :tag, :name, :class_name => 'ActsAsTaggableOn::Tag'
   
   # GET /jokes
   # GET /jokes.json
@@ -81,6 +82,6 @@ class JokesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def joke_params
-      params.require(:joke).permit(:content)
+      params.require(:joke).permit(:content, :tag_list)
     end
 end
