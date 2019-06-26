@@ -17,5 +17,7 @@
 //= require activestorage
 //= require jquery-ui/widgets/autocomplete
 //= require autocomplete-rails
+//= require chosen-jquery
+//= require jokes
 //= require turbolinks
 //= require_tree .
